@@ -1,21 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, useState } from 'expo-status-bar';
+import React, { StrictMode } from 'react';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import Landing from './landing'
+import Header from './header'
+import List from './list'
 
 export default function App() {
+
   return (
+    // <View style={styles.container} >
+    //   <Landing />
+    // </View>
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Header />
+      <Landing />
+      {/* <List /> */}
+
+    </View >
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#e6f3ff',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    width: '100%',
+    // flexWrap: 'wrap'
   },
+
+
 });
